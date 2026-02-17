@@ -1,2 +1,11 @@
 <Solution>
+  <Folder Name="/Mediation/" />
+  <Folder Name="/Mediation/src/">
+    <Project Path="Mediation/src/RD.AspNetCore.Mediation.csproj" />
+  </Folder>
+
+  <Folder Name="/Mediation/tests/">
+    <Project Path="Mediation/tests/RD.AspNetCore.Mediation.Tests/RD.AspNetCore.Mediation.Tests.csproj" />
+  </Folder>
+  
 </Solution>
