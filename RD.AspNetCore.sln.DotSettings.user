@@ -5,5 +5,7 @@
     &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.ServiceCollectionExtensionsTests&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.EndpointRouteBuilderExtensionsTests.UseMediationFromAssembly_maps_endpoints_and_uses_di&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.EndpointRouteBuilderExtensionsTests.UseMediationFromAssembly_throws_for_null_assembly&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.MediatorTests.ExecuteAsync_for_command_invokes_handler&lt;/TestId&gt;
+    &lt;TestId&gt;xUnit::B3B18F57-3ED9-7BD2-2C5C-DC916F5FAB9E::net10.0::RD.AspNetCore.Components.Tests.RedirectManagerTests&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

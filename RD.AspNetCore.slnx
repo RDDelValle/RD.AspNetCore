@@ -1,4 +1,11 @@
 <Solution>
+  <Folder Name="/Components/" />
+  <Folder Name="/Components/src/">
+    <Project Path="Components/src/RD.AspNetCore.Components.csproj" />
+  </Folder>
+  <Folder Name="/Components/tests/">
+    <Project Path="Components/tests/RD.AspNetCore.Components.Tests/RD.AspNetCore.Components.Tests.csproj" />
+  </Folder>
   <Folder Name="/Mediation/" />
   <Folder Name="/Mediation/src/">
     <Project Path="Mediation/src/RD.AspNetCore.Mediation.csproj" />
