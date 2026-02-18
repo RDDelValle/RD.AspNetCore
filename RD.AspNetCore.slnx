@@ -4,7 +4,7 @@
     <Project Path="Components/src/RD.AspNetCore.Components.csproj" />
   </Folder>
   <Folder Name="/Components/tests/">
-    <Project Path="Components/tests/RD.AspNetCore.Components.Tests/RD.AspNetCore.Components.Tests.csproj" />
+    <Project Path="Components/tests/RD.AspNetCore.Components.Tests.csproj" />
   </Folder>
   <Folder Name="/Mediation/" />
   <Folder Name="/Mediation/src/">
@@ -12,7 +12,7 @@
   </Folder>
 
   <Folder Name="/Mediation/tests/">
-    <Project Path="Mediation/tests/RD.AspNetCore.Mediation.Tests/RD.AspNetCore.Mediation.Tests.csproj" />
+    <Project Path="Mediation/tests/RD.AspNetCore.Mediation.Tests.csproj" />
   </Folder>
   
 </Solution>
