@@ -1,11 +1,5 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AType_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E3_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003Fb832f0c84d8f4194ba80da6636282d1bd2b10_003F56_003F499d1c02_003FType_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bfab91b0_002Dc46e_002D4f26_002D9e87_002Ddea343ebbfe5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="ServiceCollectionExtensionsTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.ServiceCollectionExtensionsTests&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.EndpointRouteBuilderExtensionsTests.UseMediationFromAssembly_maps_endpoints_and_uses_di&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.EndpointRouteBuilderExtensionsTests.UseMediationFromAssembly_throws_for_null_assembly&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::BC15B62C-D3A0-B3AB-3A12-DAA1200F6D6E::net10.0::RD.AspNetCore.Mediation.Tests.MediatorTests.ExecuteAsync_for_command_invokes_handler&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::B3B18F57-3ED9-7BD2-2C5C-DC916F5FAB9E::net10.0::RD.AspNetCore.Components.Tests.RedirectManagerTests&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

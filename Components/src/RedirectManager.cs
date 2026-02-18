@@ -5,7 +5,7 @@ namespace RD.AspNetCore.Components
 {
     public sealed class RedirectManager(NavigationManager navigationManager, IHttpContextAccessor? httpContextAccessor = null)
     {
-        public const string StatusMessageCookieName = "StatusMessage";
+        public const string StatusMessageCookieName = ".rm.status";
 
         public void RedirectTo(string? uri)
         {
@@ -82,6 +82,32 @@ namespace RD.AspNetCore.Components
         public void RedirectToExternal(string uri)
         {
             navigationManager.NavigateTo(uri, forceLoad: true);
+        }
+
+        public bool HasStatusMessage()
+        {
+            var context = httpContextAccessor?.HttpContext;
+            if (context is null)
+            {
+                return false;
+            }
+
+            return context.Request.Cookies.TryGetValue(StatusMessageCookieName, out var value)
+                   && !string.IsNullOrEmpty(value);
+        }
+
+        public string GetStatusMessage()
+        {
+            var context = httpContextAccessor?.HttpContext
+                          ?? throw new InvalidOperationException("HttpContext is not available for reading status cookies.");
+
+            if (!context.Request.Cookies.TryGetValue(StatusMessageCookieName, out var value)
+                || string.IsNullOrEmpty(value))
+            {
+                throw new InvalidOperationException("Status message cookie is not available.");
+            }
+
+            return value;
         }
 
         public void ClearStatus()

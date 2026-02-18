@@ -130,6 +130,71 @@ public sealed class RedirectManagerTests
     }
 
     [Fact]
+    public void HasStatusMessage_returns_true_when_cookie_present()
+    {
+        var context = new DefaultHttpContext();
+        context.Request.Headers.Cookie = $"{RedirectManager.StatusMessageCookieName}=Saved%21";
+        var accessor = new HttpContextAccessor { HttpContext = context };
+        var navigationManager = new TestNavigationManager("https://example.com/");
+        var redirectManager = new RedirectManager(navigationManager, accessor);
+
+        var result = redirectManager.HasStatusMessage();
+
+        Assert.True(result);
+    }
+
+    [Fact]
+    public void HasStatusMessage_returns_false_when_cookie_missing()
+    {
+        var context = new DefaultHttpContext();
+        var accessor = new HttpContextAccessor { HttpContext = context };
+        var navigationManager = new TestNavigationManager("https://example.com/");
+        var redirectManager = new RedirectManager(navigationManager, accessor);
+
+        var result = redirectManager.HasStatusMessage();
+
+        Assert.False(result);
+    }
+
+    [Fact]
+    public void GetStatusMessage_returns_cookie_value()
+    {
+        var context = new DefaultHttpContext();
+        context.Request.Headers.Cookie = $"{RedirectManager.StatusMessageCookieName}=Saved%21";
+        var accessor = new HttpContextAccessor { HttpContext = context };
+        var navigationManager = new TestNavigationManager("https://example.com/");
+        var redirectManager = new RedirectManager(navigationManager, accessor);
+
+        var message = redirectManager.GetStatusMessage();
+
+        Assert.Equal("Saved!", message);
+    }
+
+    [Fact]
+    public void GetStatusMessage_throws_when_cookie_missing()
+    {
+        var context = new DefaultHttpContext();
+        var accessor = new HttpContextAccessor { HttpContext = context };
+        var navigationManager = new TestNavigationManager("https://example.com/");
+        var redirectManager = new RedirectManager(navigationManager, accessor);
+
+        var exception = Assert.Throws<InvalidOperationException>(() => redirectManager.GetStatusMessage());
+
+        Assert.Contains("Status message cookie is not available", exception.Message);
+    }
+
+    [Fact]
+    public void GetStatusMessage_throws_when_httpcontext_missing()
+    {
+        var navigationManager = new TestNavigationManager("https://example.com/");
+        var redirectManager = new RedirectManager(navigationManager, new HttpContextAccessor());
+
+        var exception = Assert.Throws<InvalidOperationException>(() => redirectManager.GetStatusMessage());
+
+        Assert.Contains("HttpContext is not available", exception.Message);
+    }
+
+    [Fact]
     public void ClearStatus_deletes_cookie()
     {
         var context = new DefaultHttpContext();
